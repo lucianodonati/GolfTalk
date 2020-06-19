@@ -4,7 +4,7 @@
 public class SfxManager : Singleton<SfxManager>
 {
     [SerializeField]
-    private AudioClip[] ballHitClips = null;
+    private AudioClip ballHitClip = null, cheerClip = null;
 
     [SerializeField, HideInInspector]
     private AudioSource aSource = null;
@@ -17,7 +17,11 @@ public class SfxManager : Singleton<SfxManager>
 
     public void PlayHitBall()
     {
-        aSource.clip = ballHitClips[0];
-        aSource.PlayScheduled(AudioSettings.dspTime);
+        aSource.PlayOneShot(ballHitClip);
+    }
+
+    public void PlayCheer()
+    {
+        aSource.PlayOneShot(cheerClip);
     }
 }
