@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 53509e24c184dfd4cb3c8947352e81f6
+  - enabled: 1
     path: Assets/Scenes/Pedotita.unity
     guid: a88b125fbef604844b3351c0d3993751
   m_configObjects: {}
