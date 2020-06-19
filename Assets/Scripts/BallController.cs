@@ -24,7 +24,7 @@ public class BallController : MonoBehaviour
 
     private float timeHeld = 0;
 
-    private Vector3 aimDirection = Vector3.forward;
+    private Vector3 aimDirection = Vector3.forward, storedPosition;
 
     private void OnEnable()
     {
@@ -67,6 +67,15 @@ public class BallController : MonoBehaviour
             ballRB.AddForce(aimDirection * (timeHeld / timeToMax * maxForce), ForceMode.Impulse);
             timeHeld = 0;
             arrowRenderer.enabled = false;
+
+            SfxManager.Instance.PlayHitBall();
+
+            storedPosition = transform.position;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            transform.position = storedPosition;
         }
     }
 }
