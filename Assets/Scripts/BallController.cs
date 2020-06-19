@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody), typeof(Collider))]
 public class BallController : MonoBehaviour
@@ -10,9 +11,12 @@ public class BallController : MonoBehaviour
     private float maxForce = 5;
 
     [SerializeField]
+    private SpriteRenderer arrowRenderer = null;
+
+    [SerializeField]
     private Transform arrowPivot = null, theArrow = null, shortArrow = null, longArrow = null;
 
-    [SerializeField, HideInInspector]
+    [SerializeField]
     private Camera mainCamera = null;
 
     [SerializeField, HideInInspector]
@@ -22,12 +26,10 @@ public class BallController : MonoBehaviour
 
     private Vector3 aimDirection = Vector3.forward;
 
-    private void OnValidate()
+    private void OnEnable()
     {
         if (null == ballRB)
             ballRB = GetComponent<Rigidbody>();
-        if (null == mainCamera)
-            mainCamera = Camera.main;
     }
 
     private void Update()
@@ -48,6 +50,8 @@ public class BallController : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0))
         {
+            arrowRenderer.enabled = true;
+
             timeHeld += Time.deltaTime;
 
             if (timeHeld > timeToMax)
@@ -61,8 +65,8 @@ public class BallController : MonoBehaviour
         else if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
             ballRB.AddForce(aimDirection * (timeHeld / timeToMax * maxForce), ForceMode.Impulse);
-            SfxManager.Instance.PlayHitBall();
             timeHeld = 0;
+            arrowRenderer.enabled = false;
         }
     }
 }
