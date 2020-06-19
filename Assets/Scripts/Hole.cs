@@ -11,6 +11,7 @@ public class Hole : MonoBehaviour
     private IEnumerator OnTriggerEnter(Collider other)
     {
         var ps = Instantiate(particlesPrefab, transform);
+        SfxManager.Instance.PlayCheer();
         yield return new WaitForSeconds(2);
         ps.Stop();
     }
