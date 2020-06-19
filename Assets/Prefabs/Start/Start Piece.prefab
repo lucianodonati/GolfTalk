@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6602481482847699444}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Start Piece
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8703683189755304020}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 88097566786496615}
   - component: {fileID: 5961593321312618031}
   - component: {fileID: 3750005076889821861}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: start
   m_TagString: Untagged
   m_Icon: {fileID: 0}

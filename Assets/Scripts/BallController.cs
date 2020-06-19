@@ -38,7 +38,7 @@ public class BallController : MonoBehaviour
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hitData;
 
-        if (Physics.Raycast(ray, out hitData))
+        if (Physics.Raycast(ray, out hitData, 100, LayerMask.GetMask("Ground")))
         {
             Vector3 mouseWorldPos = hitData.point;
             mouseWorldPos = new Vector3(mouseWorldPos.x, transform.position.y, mouseWorldPos.z);

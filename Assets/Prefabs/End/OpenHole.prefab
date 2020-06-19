@@ -117,6 +117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: holeOpen
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 93a3ed075d414704fb5842232bc1ab4e, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: 93a3ed075d414704fb5842232bc1ab4e, type: 3}
       propertyPath: m_Convex
       value: 0

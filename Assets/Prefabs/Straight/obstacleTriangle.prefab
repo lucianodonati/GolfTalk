@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 925916407044793823}
   - component: {fileID: 3115773343023534357}
   - component: {fileID: 1375905995538250649}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacleTriangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

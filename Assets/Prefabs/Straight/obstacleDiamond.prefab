@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5222043310052173388}
   - component: {fileID: 8042474493887484550}
   - component: {fileID: 6321325026203285514}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: obstacleDiamond
   m_TagString: Untagged
   m_Icon: {fileID: 0}

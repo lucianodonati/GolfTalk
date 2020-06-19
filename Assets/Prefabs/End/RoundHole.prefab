@@ -117,5 +117,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: holeRound
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4348a43601c5dc644940538633580000, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4348a43601c5dc644940538633580000, type: 3}

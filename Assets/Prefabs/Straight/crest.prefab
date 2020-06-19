@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6520029850934513527}
   - component: {fileID: 9052019554535209917}
   - component: {fileID: 5024464387509473585}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: crest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
